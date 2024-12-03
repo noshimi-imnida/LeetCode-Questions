@@ -1,0 +1,13 @@
+class Solution :
+    def isMonotonic(self, nums):
+        self.nums=nums
+        inc = dec = True
+        for i in range(len(nums)-1):
+            if nums[i] > nums[i+1]:
+                inc = False
+                if dec == False: return False
+            if nums[i] < nums[i+1]:
+                dec = False
+                if inc == False: return False
+
+        return True if dec or inc else False
