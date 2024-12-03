@@ -7,3 +7,4 @@ haystack="sadbutsad"
 needle="sad"
 s=Solution()
 print(s.strStr(haystack, needle))                  
+
