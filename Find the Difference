@@ -1,0 +1,11 @@
+class Solution:
+    def findTheDifference(self, s, t):
+        self.s=s
+        self.t=t
+        sum_s = sum(ord(char) for char in self.s)
+        sum_t = sum(ord(char) for char in self.t)
+        return chr(sum_t - sum_s)
+s="abcd"
+t="abcde"
+sol= Solution()
+print(sol.findTheDifference(s,t))
