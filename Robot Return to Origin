@@ -1,0 +1,16 @@
+class Solution(object):
+    def judgeCircle(self, moves):
+        self.moves=moves
+        orgin=[0,0]
+        for i in range(len(moves)):
+            if moves[i]=="R":
+                orgin[0]+=1
+            elif moves[i]=="L": 
+                orgin[0]-=1
+            elif moves[i]=="U":
+                orgin[1]+=1
+            elif moves[i]=="D":
+                orgin[1]-=1 
+        if orgin[0]==0 and orgin[1]==0:
+            return True
+        
