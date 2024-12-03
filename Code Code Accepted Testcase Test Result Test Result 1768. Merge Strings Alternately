@@ -1,0 +1,16 @@
+class Solution :
+    def mergeAlternately(self,word1,word2):
+        self.word1=word1
+        self.word2=word2
+        merged=[]
+        min_length = min(len(self.word1), len(self.word2))
+        for i in range(min_length):
+            merged.append(self.word1[i])
+            merged.append(self.word2[i])
+        merged.append(self.word1[min_length:])
+        merged.append(self.word2[min_length:])
+        return ''.join(merged)
+word1="abc"
+word2="pqr"
+merger = Solution()
+print(merger.mergeAlternately(word1, word2))
