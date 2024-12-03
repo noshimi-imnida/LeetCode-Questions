@@ -1,0 +1,9 @@
+class Solution:
+    def strStr(self, haystack, needle):
+        self.haystack=haystack
+        self.needle=needle
+        return haystack.find(needle)
+haystack="sadbutsad"
+needle="sad"
+s=Solution()
+print(s.strStr(haystack, needle))                  
