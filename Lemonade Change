@@ -1,0 +1,31 @@
+class Solution(object):
+    def lemonadeChange(self, bills):
+        collect=[]
+        success=False
+        for i in bills:
+            collect.append(i)
+            if i==10:
+                payback=i-5
+                if payback in collect:
+                    collect.remove(payback)
+                    success = True
+                else:
+                    success = False
+                    break
+            elif i==20:
+                payback=i-5
+                if 10 in collect and 5 in collect:
+                    collect.remove(10)
+                    collect.remove(5)
+                    success = True
+                elif collect.count(5) >= 3:
+                    collect.remove(5)
+                    collect.remove(5)
+                    collect.remove(5)
+                    success = True
+                else:
+                    success = False
+                    break
+            else:
+                success=True
+        return success
