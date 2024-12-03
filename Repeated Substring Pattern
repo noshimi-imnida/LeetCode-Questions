@@ -3,4 +3,3 @@ class Solution:
         self.s=s
         return s in (s + s)[1:-1]
        
-        
