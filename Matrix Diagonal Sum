@@ -1,0 +1,11 @@
+class Solution():
+    def diagonalSum(self, mat):
+        n=len(mat)
+        mid=n//2
+        sum=0
+        for i in range(n):
+            sum+=mat[i][i]                  #primary diagonal
+            sum+=mat[n-1-i][i]              #secondary diagonal
+        if n%2==1:
+            sum-=mat[mid][mid]
+        return sum    
