@@ -13,4 +13,3 @@ class Solution(object):
                 orgin[1]-=1 
         if orgin[0]==0 and orgin[1]==0:
             return True
-        
